@@ -5,7 +5,7 @@ import * as CdkWorkshop from '../lib/cdk-workshop-stack';
 test('SQS Queue and SNS Topic Created', () => {
   const app = new cdk.App();
   // WHEN
-  const stack = new CdkWorkshop.CdkWorkshopStack(app, 'MyTestStack');
+  const stack = new CdkWorkshop.CdkWorkshopStack(app, 'MyTestStack', { datadogApiKey: 'asdf' });
   // THEN
 
   const template = Template.fromStack(stack);
